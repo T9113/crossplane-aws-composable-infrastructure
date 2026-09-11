@@ -1,0 +1,13 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: CompositeResourceDefinition
+metadata:
+  name: xpostgresinstances.database.company.io
+spec:
+  group: database.company.io
+  names:
+    kind: XPostgresInstance
+    plural: xpostgresinstances
+  versions:
+  - name: v1alpha1
+    served: true
+    referenceable: true
