@@ -1,0 +1,13 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: Composition
+metadata:
+  name: aws-rds-postgresql
+spec:
+  compositeTypeRef:
+    apiVersion: database.company.io/v1alpha1
+    kind: XPostgresInstance
+  resources:
+  - name: rds-instance
+    base:
+      apiVersion: database.aws.upbound.io/v1beta1
+      kind: Instance
